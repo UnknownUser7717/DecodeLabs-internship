@@ -29,10 +29,11 @@ df['Month'] = df['Date'].dt.month
 df.insert(2, 'Year', df.pop('Year'))
 df.insert(3, 'Month', df.pop('Month'))
 
-# Step 6: Clean ShippingAddress (remove "Main St")
+# Step 6: removing some useless junk.
 df['ShippingAddress'] = df['ShippingAddress'].str.replace(' Main St', '', regex=False)
-# Clean CustomerID (remove 'C')
 df['CustomerID'] = df['CustomerID'].str.replace('C', '', regex=False)
+df['OrderID'] = df['OrderID'].str.replace('ORD', '', regex=False)
+df['TrackingNumber'] = df['TrackingNumber'].str.replace('TRK', '', regex=False)
 
 print("Done! Shape:", df.shape)
 print(df.head())
