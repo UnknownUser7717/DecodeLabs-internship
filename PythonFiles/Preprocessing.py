@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_excel("Dataset_for_Data_Analytics.xlsx")
+df = pd.read_excel("Data/Dataset_for_Data_Analytics.xlsx")
 
 # Step 1: Handle missing values
 df['CouponCode'] = df['CouponCode'].fillna('No_Coupon')
