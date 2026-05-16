@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load cleaned data
-df = pd.read_csv("Data/cleaned_dataset.csv")
+df = pd.read_excel("Data/cleaned_dataset.xlsx")
 
 sns.set_theme(style="darkgrid")
 
