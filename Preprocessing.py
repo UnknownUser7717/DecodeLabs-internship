@@ -3,7 +3,7 @@ import pandas as pd
 df = pd.read_excel("Dataset_for_Data_Analytics.xlsx")
 
 # Step 1: Handle missing values
-df['CouponCode'] = df['CouponCode'].fillna('No Coupon')
+df['CouponCode'] = df['CouponCode'].fillna('No_Coupon')
 
 # Step 2: Convert to category dtype
 cat_cols = ['OrderStatus', 'Product', 'PaymentMethod', 'ReferralSource', 'CouponCode']
@@ -31,6 +31,10 @@ df.insert(3, 'Month', df.pop('Month'))
 
 # Step 6: Clean ShippingAddress (remove "Main St")
 df['ShippingAddress'] = df['ShippingAddress'].str.replace(' Main St', '', regex=False)
+# Clean CustomerID (remove 'C')
+df['CustomerID'] = df['CustomerID'].str.replace('C', '', regex=False)
 
 print("Done! Shape:", df.shape)
 print(df.head())
+
+df.to_excel("cleaned_dataset.xlsx", index=False)
