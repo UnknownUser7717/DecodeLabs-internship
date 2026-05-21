@@ -2,7 +2,7 @@ USE DecodelabsDB;
 
 
 BULK INSERT Orders
-FROM 'C:\Users\donia\PycharmProjects\PythonProject\DecodeLabs-internship\Data\cleaned_dataset.csv'
+FROM 'D:\files\Code\DecodeLabs-internship\Data\cleaned_dataset.csv'
 WITH (
     FIELDTERMINATOR = ',',
     ROWTERMINATOR = '\n',
