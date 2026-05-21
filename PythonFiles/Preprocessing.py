@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_excel("Data/Dataset_for_Data_Analytics.xlsx")
+df = pd.read_excel("D:/files/Code/DecodeLabs-internship/Data/Dataset for Data Analytics.xlsx")
 
 # Step 1: Handle missing values
 df['CouponCode'] = df['CouponCode'].fillna('No_Coupon')
@@ -37,5 +37,3 @@ df['TrackingNumber'] = df['TrackingNumber'].str.replace('TRK', '', regex=False)
 
 print("Done! Shape:", df.shape)
 print(df.head())
-
-df.to_excel("cleaned_dataset.xlsx", index=False)
