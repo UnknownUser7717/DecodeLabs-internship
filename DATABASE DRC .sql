@@ -45,7 +45,7 @@ FROM Orders
 GROUP BY Product, OrderStatus
 ORDER BY Product ASC, TotalOrders DESC;
 
-SELECT TOP 3 PaymentMethod, ROUND(sum(TotalPrice), 2) AS TotalRevenue
+SELECT PaymentMethod, ROUND(sum(TotalPrice), 2) AS TotalRevenue
 from Orders
 group by PaymentMethod
 having COUNT(*) > 200
