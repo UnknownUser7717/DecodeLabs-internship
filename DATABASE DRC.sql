@@ -26,7 +26,6 @@ SELECT ReferralSource, ROUND(AVG(TotalPrice), 2) AS AvgOrderValue
 FROM Orders
 GROUP BY ReferralSource
 ORDER BY AvgOrderValue DESC;
-GO
 
 SELECT Product, ROUND(SUM(TotalPrice), 2) AS TotalSales
 FROM Orders
