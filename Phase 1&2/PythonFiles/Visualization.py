@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load cleaned data
-df = pd.read_excel("Data/cleaned_dataset.xlsx")
+df = pd.read_excel("D:/files/Code/DecodeLabs-internship/Data/cleaned_dataset.xlsx")
 
 sns.set_theme(style="darkgrid")
 
@@ -80,4 +80,21 @@ plt.xlabel('Month')
 plt.ylabel('Number of Orders')
 plt.tight_layout()
 plt.show()
+
+# Pie Chart 9 — Orders by OrderStatus
+plt.figure(figsize=(8, 8))
+df['OrderStatus'].value_counts().plot(kind='pie', autopct='%1.1f%%', startangle=90)
+plt.title('Orders by Order Status')
+plt.ylabel('')
+plt.tight_layout()
+plt.show()
+
+# Pie Chart 10 — Orders by ReferralSource
+plt.figure(figsize=(8, 8))
+df['ReferralSource'].value_counts().plot(kind='pie', autopct='%1.1f%%', startangle=90)
+plt.title('Orders by Referral Source')
+plt.ylabel('')
+plt.tight_layout()
+plt.show()
+
 print("Visualizations generated successfully!")
